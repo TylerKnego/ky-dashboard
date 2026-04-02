@@ -40,7 +40,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </head>
 <body>
 <div class="hdr">
-  <div class="htitle">Kentucky Sales Dashboard - 2026</div>
+  <div class="htitle">Kentucky Sales Dashboard &mdash; 2026</div>
   <div class="hmeta">
     <span><span class="sdot" id="sdot"></span><span id="slbl">loading...</span></span>
     <span id="updated"></span>
@@ -54,7 +54,62 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <script>
 var SB_URL='https://chduqqvxahpygbnkcxvt.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoZHVxcXZ4YWhweWdibmtjeHZ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTI2OTksImV4cCI6MjA5MDcyODY5OX0.LpYvu0jSzmRBHp2yqkTfWIZtX3UUdqxYhtSiwaf7w8g';
-var BUDGET={IT:{written:{total:{sales:[1274234,1104102,1243875,1180418,1304258,1210694,1293212,1383630,1248571,1289312,935023,947182],margin:[395414,346501,390716,370688,404127,380650,407865,436144,393245,404127,293886,296245]},Builder:{sales:[851684,761570,856281,798460,786382,753848,797320,856045,788338,842072,582398,611240],margin:[265740,237623,267175,249134,245365,235214,248778,267101,245975,262741,181718,190717]},Retail:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},"Property Management":{sales:[303748,300031,344377,336635,369900,403354,455291,481368,417157,380670,310047,276296],margin:[99183,97969,112450,109922,120784,131707,148666,157181,136215,124300,101240,90219]},Wholesale:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},Commercial:{sales:[118802,42500,43217,45322,147977,53492,40601,46218,43076,66570,42578,59647],margin:[30491,10908,11092,11632,37979,13729,10420,11862,11056,17086,10928,15309]}},closed:{total:{sales:[937215,1027888,1170011,1145399,1304127,1248644,1306039,1422863,1324163,1357205,1070840,1100118],margin:[292949,320206,365617,359400,408878,391388,410592,447480,416235,426861,336194,343807]},Builder:{sales:[611335,637981,729943,760091,840587,822107,802934,858657,845248,921424,719356,735975],margin:[190747,199061,227755,237162,262278,256512,250529,267916,263732,287501,224452,229637]},Retail:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},"Property Management":{sales:[265658,301577,356580,334130,395430,363560,442757,497419,423426,393776,308155,296405],margin:[86745,98474,116434,109104,129120,118713,144574,162423,138261,128580,100622,96785]},Wholesale:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},Commercial:{sales:[60223,88329,83488,51178,68109,62977,60348,66788,55489,42004,43328,67738],margin:[15456,22670,21427,13135,17480,16163,15489,17141,14242,10781,11120,17385]}}},LEX:{written:{total:{sales:[895207,613624,661180,664104,976954,656863,669787,706584,654503,744775,541368,582791],margin:[266199,190814,206555,206206,284853,203075,210988,220606,203815,228442,166995,176936]},Builder:{sales:[212311,189847,213457,199043,196032,187922,198759,213398,196519,209914,145182,152372],margin:[66245,59236,66602,62105,61165,58635,62016,66584,61318,65497,45299,47543]},Retail:{sales:[131151,117151,128466,124974,114861,118609,139867,132351,120863,129445,98349,95598],margin:[52582,46970,51506,50106,46051,47554,56077,53064,48458,51899,39431,38328]},"Property Management":{sales:[53849,53190,61051,59679,65576,71507,80714,85337,73954,67485,54965,48982],margin:[17583,17368,19935,19487,21413,23349,26356,27865,24148,22036,17948,15994]},Wholesale:{sales:[101892,111768,114149,129333,107230,100518,115109,121438,119580,116028,100945,87017],margin:[28153,30882,31539,35735,29628,27773,31805,33553,33040,32058,27891,24043]},Commercial:{sales:[396005,141668,144057,151074,493255,178307,135337,154059,143587,221902,141925,198822],margin:[101636,36360,36973,38774,126596,45763,34735,39540,36852,56952,36426,51028]}},closed:{total:{sales:[598468,715661,749682,672301,743075,714965,700683,766429,723777,703552,616832,662315],margin:[182814,212706,225218,208595,226286,219827,215893,234957,223975,220778,192885,201553]},Builder:{sales:[152396,159038,181963,189478,209544,204938,200158,214049,210706,229696,179324,183466],margin:[47550,49623,56776,59120,65382,63944,62453,66787,65744,71669,55952,57245]},Retail:{sales:[109057,99395,111319,131961,115778,127166,121592,124301,131047,139831,129524,110717],margin:[43724,39850,44631,52907,46419,50985,48750,49836,52541,56063,51930,44390]},"Property Management":{sales:[47096,53464,63215,59235,70102,64452,78492,88183,75065,69809,54630,52547],margin:[15378,17458,20642,19342,22891,21046,25630,28794,24511,22795,17838,17158]},Wholesale:{sales:[89177,109333,114893,121035,120620,108487,99280,117270,121994,124201,108928,89791],margin:[24639,30209,31745,33442,33327,29975,27431,32402,33707,34317,30097,24809]},Commercial:{sales:[200743,294432,278292,170592,227030,209922,201161,222626,184965,140015,144427,225795],margin:[51522,75567,71425,43783,58268,53877,51629,57138,47472,35935,37068,57951]}}},HB:{written:{total:{sales:[355507,343163,366392,378792,337031,333531,386970,384397,361521,371107,297354,275611],margin:[124896,118684,127435,130132,116592,116407,135456,133314,124622,128954,102222,95648]},Builder:{sales:[12701,11357,12769,11907,11727,11242,11890,12766,11756,12557,8685,9115],margin:[3963,3544,3984,3715,3659,3508,3710,3983,3668,3918,2710,2844]},Retail:{sales:[208174,185952,203912,198370,182317,188267,222010,210080,191844,205467,156109,151742],margin:[83463,74554,81755,79533,73096,75482,89011,84227,76916,82378,62589,60838]},"Property Management":{sales:[6019,5945,6824,6671,7330,7993,9022,9538,8266,7543,6144,5475],margin:[1965,1941,2228,2178,2393,2610,2946,3115,2699,2463,2006,1788]},Wholesale:{sales:[127029,139342,142310,161240,133684,125316,143507,151397,149080,144652,125848,108484],margin:[35098,38500,39320,44550,36937,34625,39651,41831,41191,39967,34772,29974]},Commercial:{sales:[1584,567,576,604,1973,713,541,616,574,888,568,795],margin:[407,145,148,155,506,183,139,158,147,228,146,204]}},closed:{total:{sales:[299465,310741,338997,378993,355429,357403,338325,367054,381834,398898,358803,305434],margin:[104890,106137,116408,131545,121932,124690,118386,126942,132282,138749,125439,106963]},Builder:{sales:[9117,9514,10885,11335,12535,12260,11974,12805,12605,13741,10727,10975],margin:[2845,2969,3396,3537,3911,3825,3736,3995,3933,4287,3347,3424]},Retail:{sales:[173104,157768,176695,209460,183773,201849,193002,197301,208009,221952,205591,175739],margin:[69403,63254,70843,83979,73680,80927,77380,79104,83397,88987,82428,70459]},"Property Management":{sales:[5264,5976,7066,6621,7836,7204,8773,9857,8390,7803,6106,5873],margin:[1719,1951,2307,2162,2559,2352,2865,3218,2740,2548,1994,1918]},Wholesale:{sales:[111177,136305,143238,150894,150377,135251,123772,146201,152090,154842,135800,111942],margin:[30718,37661,39576,41692,41549,37370,34198,40395,42022,42783,37521,30930]},Commerce:{sales:[803,1178,1113,682,908,840,805,891,740,560,578,903],margin:[206,302,286,175,233,216,207,229,190,144,148,232]}}}};
+var BUDGET={
+  IT:{
+    written:{
+      total:{sales:[1274234,1104102,1243875,1180418,1304258,1210694,1293212,1383630,1248571,1289312,935023,947182],margin:[395414,346501,390716,370688,404127,380650,407865,436144,393245,404127,293886,296245]},
+      Builder:{sales:[851684,761570,856281,798460,786382,753848,797320,856045,788338,842072,582398,611240],margin:[265740,237623,267175,249134,245365,235214,248778,267101,245975,262741,181718,190717]},
+      Retail:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},
+      "Property Management":{sales:[303748,300031,344377,336635,369900,403354,455291,481368,417157,380670,310047,276296],margin:[99183,97969,112450,109922,120784,131707,148666,157181,136215,124300,101240,90219]},
+      Wholesale:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},
+      Commercial:{sales:[118802,42500,43217,45322,147977,53492,40601,46218,43076,66570,42578,59647],margin:[30491,10908,11092,11632,37979,13729,10420,11862,11056,17086,10928,15309]}
+    },
+    closed:{
+      total:{sales:[937215,1027888,1170011,1145399,1304127,1248644,1306039,1422863,1324163,1357205,1070840,1100118],margin:[292949,320206,365617,359400,408878,391388,410592,447480,416235,426861,336194,343807]},
+      Builder:{sales:[611335,637981,729943,760091,840587,822107,802934,858657,845248,921424,719356,735975],margin:[190747,199061,227755,237162,262278,256512,250529,267916,263732,287501,224452,229637]},
+      Retail:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},
+      "Property Management":{sales:[265658,301577,356580,334130,395430,363560,442757,497419,423426,393776,308155,296405],margin:[86745,98474,116434,109104,129120,118713,144574,162423,138261,128580,100622,96785]},
+      Wholesale:{sales:[0,0,0,0,0,0,0,0,0,0,0,0],margin:[0,0,0,0,0,0,0,0,0,0,0,0]},
+      Commercial:{sales:[60223,88329,83488,51178,68109,62977,60348,66788,55489,42004,43328,67738],margin:[15456,22670,21427,13135,17480,16163,15489,17141,14242,10781,11120,17385]}
+    }
+  },
+  LEX:{
+    written:{
+      total:{sales:[895207,613624,661180,664104,976954,656863,669787,706584,654503,744775,541368,582791],margin:[266199,190814,206555,206206,284853,203075,210988,220606,203815,228442,166995,176936]},
+      Builder:{sales:[212311,189847,213457,199043,196032,187922,198759,213398,196519,209914,145182,152372],margin:[66245,59236,66602,62105,61165,58635,62016,66584,61318,65497,45299,47543]},
+      Retail:{sales:[131151,117151,128466,124974,114861,118609,139867,132351,120863,129445,98349,95598],margin:[52582,46970,51506,50106,46051,47554,56077,53064,48458,51899,39431,38328]},
+      "Property Management":{sales:[53849,53190,61051,59679,65576,71507,80714,85337,73954,67485,54965,48982],margin:[17583,17368,19935,19487,21413,23349,26356,27865,24148,22036,17948,15994]},
+      Wholesale:{sales:[101892,111768,114149,129333,107230,100518,115109,121438,119580,116028,100945,87017],margin:[28153,30882,31539,35735,29628,27773,31805,33553,33040,32058,27891,24043]},
+      Commercial:{sales:[396005,141668,144057,151074,493255,178307,135337,154059,143587,221902,141925,198822],margin:[101636,36360,36973,38774,126596,45763,34735,39540,36852,56952,36426,51028]}
+    },
+    closed:{
+      total:{sales:[598468,715661,749682,672301,743075,714965,700683,766429,723777,703552,616832,662315],margin:[182814,212706,225218,208595,226286,219827,215893,234957,223975,220778,192885,201553]},
+      Builder:{sales:[152396,159038,181963,189478,209544,204938,200158,214049,210706,229696,179324,183466],margin:[47550,49623,56776,59120,65382,63944,62453,66787,65744,71669,55952,57245]},
+      Retail:{sales:[109057,99395,111319,131961,115778,127166,121592,124301,131047,139831,129524,110717],margin:[43724,39850,44631,52907,46419,50985,48750,49836,52541,56063,51930,44390]},
+      "Property Management":{sales:[47096,53464,63215,59235,70102,64452,78492,88183,75065,69809,54630,52547],margin:[15378,17458,20642,19342,22891,21046,25630,28794,24511,22795,17838,17158]},
+      Wholesale:{sales:[89177,109333,114893,121035,120620,108487,99280,117270,121994,124201,108928,89791],margin:[24639,30209,31745,33442,33327,29975,27431,32402,33707,34317,30097,24809]},
+      Commercial:{sales:[200743,294432,278292,170592,227030,209922,201161,222626,184965,140015,144427,225795],margin:[51522,75567,71425,43783,58268,53877,51629,57138,47472,35935,37068,57951]}
+    }
+  },
+  HB:{
+    written:{
+      total:{sales:[355507,343163,366392,378792,337031,333531,386970,384397,361521,371107,297354,275611],margin:[124896,118684,127435,130132,116592,116407,135456,133314,124622,128954,102222,95648]},
+      Builder:{sales:[12701,11357,12769,11907,11727,11242,11890,12766,11756,12557,8685,9115],margin:[3963,3544,3984,3715,3659,3508,3710,3983,3668,3918,2710,2844]},
+      Retail:{sales:[208174,185952,203912,198370,182317,188267,222010,210080,191844,205467,156109,151742],margin:[83463,74554,81755,79533,73096,75482,89011,84227,76916,82378,62589,60838]},
+      "Property Management":{sales:[6019,5945,6824,6671,7330,7993,9022,9538,8266,7543,6144,5475],margin:[1965,1941,2228,2178,2393,2610,2946,3115,2699,2463,2006,1788]},
+      Wholesale:{sales:[127029,139342,142310,161240,133684,125316,143507,151397,149080,144652,125848,108484],margin:[35098,38500,39320,44550,36937,34625,39651,41831,41191,39967,34772,29974]},
+      Commercial:{sales:[1584,567,576,604,1973,713,541,616,574,888,568,795],margin:[407,145,148,155,506,183,139,158,147,228,146,204]}
+    },
+    closed:{
+      total:{sales:[299465,310741,338997,378993,355429,357403,338325,367054,381834,398898,358803,305434],margin:[104890,106137,116408,131545,121932,124690,118386,126942,132282,138749,125439,106963]},
+      Builder:{sales:[9117,9514,10885,11335,12535,12260,11974,12805,12605,13741,10727,10975],margin:[2845,2969,3396,3537,3911,3825,3736,3995,3933,4287,3347,3424]},
+      Retail:{sales:[173104,157768,176695,209460,183773,201849,193002,197301,208009,221952,205591,175739],margin:[69403,63254,70843,83979,73680,80927,77380,79104,83397,88987,82428,70459]},
+      "Property Management":{sales:[5264,5976,7066,6621,7836,7204,8773,9857,8390,7803,6106,5873],margin:[1719,1951,2307,2162,2559,2352,2865,3218,2740,2548,1994,1918]},
+      Wholesale:{sales:[111177,136305,143238,150894,150377,135251,123772,146201,152090,154842,135800,111942],margin:[30718,37661,39576,41692,41549,37370,34198,40395,42022,42783,37521,30930]},
+      Commercial:{sales:[803,1178,1113,682,908,840,805,891,740,560,578,903],margin:[206,302,286,175,233,216,207,229,190,144,148,232]}
+    }
+  }
+};
 var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 var ACC={IT:'#2E7D42',LEX:'#1565C0',HB:'#D05000'};
 var LGT={IT:'rgba(46,125,66,.18)',LEX:'rgba(21,101,192,.18)',HB:'rgba(208,80,0,.18)'};
@@ -62,14 +117,19 @@ var STORES=[{k:'IT',n:'Indian Trail',c:'#1E5C2E'},{k:'LEX',n:'Lexington',c:'#0D3
 var DIVS=['total','Builder','Retail','Property Management','Wholesale','Commercial'];
 var DLBLS={total:'All divisions',Builder:'Builder',Retail:'Retail','Property Management':'Prop. Mgmt',Wholesale:'Wholesale',Commercial:'Commercial'};
 var db={},charts={};
+
 function fmt(n){return n==null?'--':'$'+Math.round(n).toLocaleString();}
 function fmtP(n){return n==null?'--':(n*100).toFixed(1)+'%';}
+
 function init(){
   document.getElementById('sdot').className='sdot';
   document.getElementById('slbl').textContent='loading...';
-  fetch(SB_URL+'/rest/v1/sales_actuals?select=store,type,division,month_index,sales,margin&limit=2000',{headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Accept':'application/json'}})
-  .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
-  .then(function(rows){
+  fetch(SB_URL+'/rest/v1/sales_actuals?select=store,type,division,month_index,sales,margin&limit=2000',{
+    headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Accept':'application/json'}
+  }).then(function(r){
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    return r.json();
+  }).then(function(rows){
     db={};
     (rows||[]).forEach(function(row){
       if(!db[row.store])db[row.store]={};
@@ -85,45 +145,107 @@ function init(){
   }).catch(function(e){
     document.getElementById('sdot').className='sdot err';
     document.getElementById('slbl').textContent='error: '+e.message;
-    document.getElementById('body').innerHTML='<div style="padding:40px;text-align:center;color:#e53935;font-size:14px">Failed to load: '+e.message+'</div>';
+    document.getElementById('body').innerHTML='<div style="padding:40px;text-align:center;color:#e53935;font-size:14px">Failed to load data: '+e.message+'</div>';
   });
 }
+
 function buildUI(){
-  var body=document.getElementById('body');body.innerHTML='';
+  var body=document.getElementById('body');
+  body.innerHTML='';
   STORES.forEach(function(s){
-    var sec=document.createElement('div');sec.className='ss';sec.id='s'+s.k;
-    var divBtns=DIVS.map(function(d){return '<button class="tbtn '+(d==='total'?'on':'')+'" onclick="setDiv(this,\''+s.k+'\',\''+d+'\')">'+DLBLS[d]+'</button>';}).join('');
-    sec.innerHTML='<div class="sh" style="background:'+s.c+'"><span class="sn">'+s.n+'</span><div class="trow"><button class="tbtn on" onclick="setType(this,\''+s.k+'\',\'written\')">Written</button><button class="tbtn" onclick="setType(this,\''+s.k+'\',\'closed\')">Closed</button></div><div class="trow" id="db'+s.k+'">'+divBtns+'</div></div><div class="vp" id="vp'+s.k+'"></div>';
-    body.appendChild(sec);renderStore(s.k,'written','total');
+    var sec=document.createElement('div');
+    sec.className='ss';sec.id='s'+s.k;
+    var divBtns=DIVS.map(function(d){
+      return '<button class="tbtn '+(d==='total'?'on':'')+'" onclick="setDiv(\''+s.k+'\',\''+d+'\',this)">'+DLBLS[d]+'</button>';
+    }).join('');
+    sec.innerHTML='<div class="sh" style="background:'+s.c+'">'
+      +'<span class="sn">'+s.n+'</span>'
+      +'<div class="trow"><button class="tbtn on" onclick="setType(\''+s.k+'\',\'written\',this)">Written</button>'
+      +'<button class="tbtn" onclick="setType(\''+s.k+'\',\'closed\',this)">Closed</button></div>'
+      +'<div class="trow" id="db'+s.k+'">'+divBtns+'</div></div>'
+      +'<div class="vp" id="vp'+s.k+'"></div>';
+    body.appendChild(sec);
+    renderStore(s.k,'written','total');
   });
 }
+
 function renderStore(sk,type,div){
   var bud=(BUDGET[sk]&&BUDGET[sk][type]&&BUDGET[sk][type][div])||BUDGET[sk][type].total;
   var act=(db[sk]&&db[sk][type]&&db[sk][type][div])||{sales:Array(12).fill(null),margin:Array(12).fill(null)};
-  var acc=ACC[sk],lgt=LGT[sk],aS=0,bS=0,aM=0,bM=0,filled=0;
-  for(var i=0;i<12;i++){bS+=bud.sales[i]||0;bM+=bud.margin[i]||0;if(act.sales[i]!=null){aS+=act.sales[i];filled++;}if(act.margin[i]!=null)aM+=act.margin[i];}
-  var pace=filled>0?aS/filled*12:0,pct=bS>0?Math.min(100,aS/bS*100):0;
-  var aMp=aS>0?aM/aS:null,bMp=bS>0?bM/bS:null;
-  var cid='c'+sk+type+div.replace(/ /g,''),rows='';
+  var acc=ACC[sk],lgt=LGT[sk];
+  var aS=0,bS=0,aM=0,bM=0,filled=0;
   for(var i=0;i<12;i++){
-    var sv=act.sales[i],mv=act.margin[i],bs=bud.sales[i]||0,diff=sv!=null?sv-bs:null,mp=sv&&sv>0&&mv!=null?mv/sv:null;
-    rows+='<tr><td>'+MONTHS[i]+'</td><td>'+fmt(bs)+'</td><td>'+fmt(sv)+'</td><td class="'+(diff!=null?(diff>=0?'pos':'neg'):'')+'">'+(diff!=null?((diff>=0?'+':'')+fmt(diff)):'--')+'</td><td>'+fmt(mv)+'</td><td>'+fmtP(mp)+'</td></tr>';
+    bS+=bud.sales[i]||0;bM+=bud.margin[i]||0;
+    if(act.sales[i]!=null){aS+=act.sales[i];filled++;}
+    if(act.margin[i]!=null)aM+=act.margin[i];
   }
-  document.getElementById('vp'+sk).innerHTML='<div class="cg"><div class="mc"><div class="ml">Actual YTD</div><div class="mv">'+fmt(aS)+'</div><div class="ms">Budget: '+fmt(bS)+'</div><div class="pw"><div class="pf" style="width:'+pct.toFixed(1)+'%;background:'+acc+'"></div></div><div class="ms">'+pct.toFixed(1)+'% of budget</div></div><div class="mc"><div class="ml">Margin YTD</div><div class="mv">'+fmt(aM)+'</div><div class="ms">Budget: '+fmt(bM)+'</div></div><div class="mc"><div class="ml">Margin %</div><div class="mv '+(aMp!=null&&bMp!=null?(aMp>=bMp?'pos':'neg'):'')+'">'+fmtP(aMp)+'</div><div class="ms">Budget: '+fmtP(bMp)+'</div></div><div class="mc"><div class="ml">Run-rate</div><div class="mv '+(filled>0?(pace>=bS?'pos':'neg'):'')+'">'+fmt(pace)+'</div><div class="ms">'+filled+' months entered</div></div></div><div class="cc"><canvas id="'+cid+'"></canvas></div><table class="dt"><thead><tr><th>Month</th><th>Budget</th><th>Actual</th><th>vs Budget</th><th>Margin $</th><th>Margin %</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  var pace=filled>0?aS/filled*12:0;
+  var pct=bS>0?Math.min(100,aS/bS*100):0;
+  var aMp=aS>0?aM/aS:null,bMp=bS>0?bM/bS:null;
+  var mpC=aMp!=null&&bMp!=null?(aMp>=bMp?'pos':'neg'):'';
+  var prC=filled>0?(pace>=bS?'pos':'neg'):'';
+  var cid='c'+sk+type+div.replace(/ /g,'');
+  var rows='';
+  for(var i=0;i<12;i++){
+    var sv=act.sales[i],mv=act.margin[i],bs=bud.sales[i]||0;
+    var diff=sv!=null?sv-bs:null;
+    var mp=sv&&sv>0&&mv!=null?mv/sv:null;
+    rows+='<tr><td>'+MONTHS[i]+'</td><td>'+fmt(bs)+'</td>'
+      +'<td style="font-weight:500">'+fmt(sv)+'</td>'
+      +'<td class="'+(diff!=null?(diff>=0?'pos':'neg'):'')+'">'+(diff!=null?((diff>=0?'+':'')+fmt(diff)):'--')+'</td>'
+      +'<td>'+fmt(mv)+'</td><td>'+fmtP(mp)+'</td></tr>';
+  }
+  var vp=document.getElementById('vp'+sk);
+  vp.innerHTML='<div class="cg">'
+    +'<div class="mc"><div class="ml">Actual sales YTD</div><div class="mv">'+fmt(aS)+'</div>'
+    +'<div class="ms">Budget: '+fmt(bS)+'</div>'
+    +'<div class="pw"><div class="pf" style="width:'+pct.toFixed(1)+'%;background:'+acc+'"></div></div>'
+    +'<div class="ms" style="margin-top:3px">'+pct.toFixed(1)+'% of budget</div></div>'
+    +'<div class="mc"><div class="ml">Margin YTD</div><div class="mv">'+fmt(aM)+'</div><div class="ms">Budget: '+fmt(bM)+'</div></div>'
+    +'<div class="mc"><div class="ml">Margin %</div><div class="mv '+mpC+'">'+fmtP(aMp)+'</div><div class="ms">Budget: '+fmtP(bMp)+'</div></div>'
+    +'<div class="mc"><div class="ml">Run-rate</div><div class="mv '+prC+'">'+(filled>0?fmt(pace):'--')+'</div><div class="ms">'+filled+' months entered</div></div>'
+    +'</div>'
+    +'<div class="cc"><canvas id="'+cid+'"></canvas></div>'
+    +'<table class="dt"><thead><tr><th>Month</th><th>Budget</th><th>Actual</th><th>vs Budget</th><th>Margin $</th><th>Margin %</th></tr></thead>'
+    +'<tbody>'+rows+'</tbody></table>';
   if(charts[cid])charts[cid].destroy();
-  charts[cid]=new Chart(document.getElementById(cid).getContext('2d'),{type:'bar',data:{labels:MONTHS,datasets:[{label:'Budget',data:bud.sales,backgroundColor:'rgba(130,130,130,.18)',borderColor:'rgba(130,130,130,.4)',borderWidth:1,borderRadius:3},{label:'Actual',data:MONTHS.map(function(_,i){return act.sales[i];}),backgroundColor:lgt,borderColor:acc,borderWidth:1.5,borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11},autoSkip:false}},y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11},callback:function(v){return v>=1e6?'$'+(v/1e6).toFixed(1)+'M':v>=1000?'$'+(v/1000).toFixed(0)+'k':'$'+v;}}}}}});
+  charts[cid]=new Chart(document.getElementById(cid).getContext('2d'),{
+    type:'bar',
+    data:{labels:MONTHS,datasets:[
+      {label:'Budget',data:bud.sales,backgroundColor:'rgba(130,130,130,.18)',borderColor:'rgba(130,130,130,.4)',borderWidth:1,borderRadius:3},
+      {label:'Actual',data:MONTHS.map(function(_,i){return act.sales[i];}),backgroundColor:lgt,borderColor:acc,borderWidth:1.5,borderRadius:3}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return ' '+c.dataset.label+': '+(c.raw!=null?'$'+Math.round(c.raw).toLocaleString():'--');}}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:11},autoSkip:false}},
+        y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11},callback:function(v){return v>=1e6?'$'+(v/1e6).toFixed(1)+'M':v>=1000?'$'+(v/1000).toFixed(0)+'k':'$'+v;}}}
+      }
+    }
+  });
 }
-function setType(el,sk,type){
-  var divEl=document.querySelector('#db'+sk+' .on'),div='total';
-  if(divEl){var m=divEl.getAttribute('onclick').match(/\'([^\']+)\'/g);if(m&&m[1])div=m[1].replace(/\'/g,'');}
-  el.closest('.trow').querySelectorAll('.tbtn').forEach(function(b){b.classList.remove('on');});el.classList.add('on');renderStore(sk,type,div);
+
+function setType(sk,type,el){
+  var divEl=document.querySelector('#db'+sk+' .on');
+  var div='total';
+  if(divEl){var m=divEl.getAttribute('onclick').match(/'([^']+)',\s*this/);if(m)div=m[1];}
+  el.closest('.trow').querySelectorAll('.tbtn').forEach(function(b){b.classList.remove('on');});
+  el.classList.add('on');
+  renderStore(sk,type,div);
 }
-function setDiv(el,sk,div){
-  var typeEl=document.querySelector('#s'+sk+' .sh .trow:first-child .on'),type='written';
-  if(typeEl){var m=typeEl.getAttribute('onclick').match(/\'([^\']+)\'/g);if(m&&m[1])type=m[1].replace(/\'/g,'');}
-  el.closest('.trow').querySelectorAll('.tbtn').forEach(function(b){b.classList.remove('on');});el.classList.add('on');renderStore(sk,type,div);
+
+function setDiv(sk,div,el){
+  var typeEl=document.querySelector('#s'+sk+' .sh .trow .on');
+  var type='written';
+  if(typeEl){var m=typeEl.getAttribute('onclick').match(/'([^']+)',\s*this/);if(m)type=m[1];}
+  el.closest('.trow').querySelectorAll('.tbtn').forEach(function(b){b.classList.remove('on');});
+  el.classList.add('on');
+  renderStore(sk,type,div);
 }
-init();setInterval(init,60000);
+
+init();
+setInterval(init,60000);
 </script>
 </body>
 </html>
+
