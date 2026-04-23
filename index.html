@@ -36,6 +36,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .dt tr:hover td{background:#f9f9f9}
 .pos{color:#2E7D42;font-weight:500}.neg{color:#C62828;font-weight:500}
 @media(max-width:580px){.cg{grid-template-columns:repeat(2,1fr)}}
+.sz-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-size:11px;font-weight:600;background:#e8edf2;color:#444;min-width:36px;text-align:center}
 </style>
 </head>
 <body>
@@ -49,6 +50,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </div>
 <div class="body">
   <div id="body"><div style="padding:60px;text-align:center;color:#888;font-size:14px">Loading data from database...</div></div>
+  <div id="emp-body"></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
@@ -243,8 +245,60 @@ function setDiv(sk,div,el){
   renderStore(sk,type,div);
 }
 
+function fetchEmployees(){
+  var eb=document.getElementById('emp-body');
+  if(!eb)return;
+  eb.innerHTML='<div class="ss"><div class="sh" style="background:#37474F"><span class="sn">Employee T-Shirt Sizes</span></div><div class="vp" id="emp-vp"><div style="padding:30px;text-align:center;color:#888;font-size:13px">Loading employee data...</div></div></div>';
+  fetch(SB_URL+'/rest/v1/employees?select=*&order=name',{
+    headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Accept':'application/json'}
+  }).then(function(r){
+    if(!r.ok)throw new Error(r.status);
+    return r.json();
+  }).then(function(rows){
+    renderEmployees(rows||[]);
+  }).catch(function(e){
+    var vp=document.getElementById('emp-vp');
+    if(vp)vp.innerHTML='<div style="padding:30px;text-align:center;color:#888;font-size:13px">No employee data available</div>';
+  });
+}
+
+function renderEmployees(rows){
+  var vp=document.getElementById('emp-vp');
+  if(!vp)return;
+  if(!rows.length){
+    vp.innerHTML='<div style="padding:30px;text-align:center;color:#888;font-size:13px">No employees found</div>';
+    return;
+  }
+  var first=rows[0];
+  var nameKey=Object.keys(first).find(function(k){return /^(name|full_name|employee_name|first_name)$/i.test(k);})||'name';
+  var sizeKey=Object.keys(first).find(function(k){return /^(tshirt_size|t_shirt_size|shirt_size|size|tshirt)$/i.test(k);})||'tshirt_size';
+  var storeKey=Object.keys(first).find(function(k){return /^(store|location|store_code|branch)$/i.test(k);});
+  var SNAMES={IT:'Indian Trail',LEX:'Lexington',HB:'Hurstbourne'};
+  var SIZE_ORDER=['XS','S','M','L','XL','2XL','3XL'];
+  var sizeCounts={};
+  rows.forEach(function(r){var s=(r[sizeKey])||'?';sizeCounts[s]=(sizeCounts[s]||0)+1;});
+  var present=SIZE_ORDER.filter(function(s){return sizeCounts[s];});
+  Object.keys(sizeCounts).forEach(function(s){if(SIZE_ORDER.indexOf(s)<0&&sizeCounts[s])present.push(s);});
+  var summary='';
+  if(present.length){
+    summary='<div style="display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px">'
+      +present.map(function(s){return '<div class="mc" style="flex:1;min-width:60px;text-align:center"><div class="ml">'+s+'</div><div class="mv">'+sizeCounts[s]+'</div></div>';}).join('')
+      +'</div>';
+  }
+  var hasStore=storeKey&&rows.some(function(r){return r[storeKey];});
+  var thead='<tr><th>Name</th>'+(hasStore?'<th>Store</th>':'')+'<th>T-Shirt Size</th></tr>';
+  var tbody=rows.map(function(r){
+    var store=hasStore?(SNAMES[r[storeKey]]||r[storeKey]||''):'';
+    return '<tr><td style="font-weight:500">'+(r[nameKey]||'—')+'</td>'
+      +(hasStore?'<td>'+store+'</td>':'')
+      +'<td><span class="sz-badge">'+(r[sizeKey]||'—')+'</span></td></tr>';
+  }).join('');
+  vp.innerHTML=summary+'<table class="dt"><thead>'+thead+'</thead><tbody>'+tbody+'</tbody></table>';
+}
+
 init();
 setInterval(init,60000);
+fetchEmployees();
 </script>
 </body>
 </html>
